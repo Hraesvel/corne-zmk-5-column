@@ -95,12 +95,12 @@
 
         leftparen {
             bindings = <&kp LPAR>;
-            key-positions = <9 19>;
+            key-positions = <0 10>;
         };
 
         rparen {
             bindings = <&kp RPAR>;
-            key-positions = <0 10>;
+            key-positions = <9 19>;
         };
 
         layout_switch {
@@ -113,14 +113,29 @@
             key-positions = <3 4 5 14 15 6>;
         };
 
-        bootloader {
-            bindings = <&bootloader>;
-            key-positions = <23 24 14 15 25 26>;
+        system_layer_combo {
+            bindings = <&tog 3>;
+            key-positions = <20 24>;
         };
 
-        system_layer_combo {
-            bindings = <&to 3>;
-            key-positions = <20 24>;
+        combo_return {
+            bindings = <&kp RETURN>;
+            key-positions = <15 16>;
+        };
+
+        combo_lt {
+            bindings = <&kp LT>;
+            key-positions = <11 13>;
+        };
+
+        combo_gt {
+            bindings = <&kp GT>;
+            key-positions = <16 18>;
+        };
+
+        combo_del {
+            bindings = <&kp DEL>;
+            key-positions = <13 14>;
         };
     };
 
@@ -134,7 +149,7 @@
   &kp Q  &kp W  &kp F          &kp P     &kp B          &kp J        &kp L                      &kp U             &kp Y    &kp SEMICOLON
   &kp A  &kp R  &kp S          &kp T     &kp G          &kp M        &kp N                      &kp E             &kp I    &kp O
   &kp Z  &kp X  &kp C          &kp D     &kp V          &kp K        &kp H                      &kp COMMA         &kp DOT  &kp FSLH
-                &mt LCTRL TAB  &kp LGUI  &lt 2 ENTER    &lt 1 SPACE  &mt RIGHT_SHIFT BACKSPACE  &mt LEFT_ALT ESC
+                &mt LCTRL TAB  &kp LGUI  &lt 2 SPACE    &lt 1 SPACE  &mt RIGHT_SHIFT BACKSPACE  &mt LEFT_ALT ESC
             >;
         };
 
@@ -158,10 +173,10 @@
 
         sys_layer {
             bindings = <
-  &bt BT_CLR    &bt BT_CLR_ALL  &bt BT_PRV    &bt BT_NXT    &trans          &none   &trans  &trans  &trans  &trans
-  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &none   &none   &none   &none
-  &bootloader   &sys_reset      &none         &none         &none           &none   &trans  &trans  &trans  &trans
-                                &trans        &trans        &trans          &trans  &trans  &trans
+  &bt BT_CLR    &none         &bt BT_PRV    &bt BT_NXT    &trans          &bt BT_CLR_ALL  &trans  &trans  &trans  &trans
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans          &none   &none   &none   &none
+  &bootloader   &sys_reset    &none         &none         &none           &none           &trans  &trans  &trans  &trans
+                              &trans        &trans        &trans          &trans          &trans  &trans
             >;
         };
 
@@ -171,6 +186,15 @@
   &kp A  &kp S  &kp D          &kp F         &kp G          &kp H        &kp J                     &kp K              &kp L    &kp SEMI
   &kp Z  &kp X  &kp C          &kp V         &kp B          &kp N        &kp M                     &kp COMMA          &kp DOT  &kp FSLH
                 &mt LCTRL TAB  &kp LEFT_GUI  &lt 2 SPACE    &lt 1 ENTER  &mt LEFT_SHIFT BACKSPACE  &mt RIGHT_ALT ESC
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
