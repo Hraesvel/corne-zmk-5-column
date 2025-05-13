@@ -105,7 +105,7 @@
 
         layout_switch {
             bindings = <&tog 4>;
-            key-positions = <>;
+            key-positions = <25 29>;
         };
 
         system_reset {
@@ -120,7 +120,7 @@
 
         system_layer_combo {
             bindings = <&to 3>;
-            key-positions = <>;
+            key-positions = <20 24>;
         };
     };
 
